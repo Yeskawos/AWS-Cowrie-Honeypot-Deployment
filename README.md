@@ -12,15 +12,14 @@
 El proyecto comenzó con la creación y configuración de la máquina virtual que actuaría como servidor cebo en la nube pública.
 
 <img width="1064" height="897" alt="configuracion-nombre-server" src="https://github.com/user-attachments/assets/936d24ec-5ede-4e08-b42b-d4fb827f60de" />
-<img width="1064" height="275" alt="configuracion-instancia-tipo" src="https://github.com/user-attachments/assets/10480eca-9083-4c8d-bd98-c42363f727be" />
-<img width="1061" height="904" alt="configuracion-red-almacenamiento" src="https://github.com/user-attachments/assets/0b980c08-7306-496b-8d70-dc53da0e15df" />
-
 
 
 * **Configuración de la Instancia:** Se localizó el servicio EC2, definiendo el nombre del servidor y seleccionando una instancia de la capa gratuita (t3.micro) con Ubuntu 24.04.
 
 Evidencias:
 <img width="1069" height="239" alt="buscamos-ec2" src="https://github.com/user-attachments/assets/0eefe542-cd94-41cf-893b-1b84f6744094" />
+<img width="1064" height="275" alt="configuracion-instancia-tipo" src="https://github.com/user-attachments/assets/10480eca-9083-4c8d-bd98-c42363f727be" />
+<img width="1061" height="904" alt="configuracion-red-almacenamiento" src="https://github.com/user-attachments/assets/0b980c08-7306-496b-8d70-dc53da0e15df" />
 
 
 * **Seguridad y Red:** Se generó un nuevo par de claves criptográficas (.pem) para el acceso inicial y se configuraron las reglas básicas del Grupo de Seguridad perimetral, junto con el almacenamiento.
