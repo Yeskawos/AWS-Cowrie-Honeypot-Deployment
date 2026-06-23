@@ -1,6 +1,6 @@
 # 🍯Proyecto Blue Team: Despliegue de Honeypot (Cowrie) en AWS
 
-**Autor:** Marcos
+**Autor:** Córdoba
 
 **Fecha:** 23/06/2026
 
