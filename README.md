@@ -124,6 +124,14 @@ Evidencia:
 
 <img width="941" height="177" alt="ponemos camara" src="https://github.com/user-attachments/assets/822515be-a1b6-42ad-934d-79978cf4bf88" />
 
+* **Análisis de Logs y Extracción de Evidencias:** Tras dejar el honeypot recolectando actividad, consolidamos el análisis del archivo `cowrie.json`. Registramos un flujo constante de conexiones procedentes de botnets globales que ejecutaban ráfagas de fuerza bruta automatizada (con diccionarios basados en credenciales genéricas como `root`, `admin` o `123456`). Tras simular un acceso exitoso, monitorizamos la fase de post-explotación en la que los scripts intentaron auditar la arquitectura del sistema mediante comandos de reconocimiento y descarga de binarios maliciosos.
+
+Evidencias:
+
+<img width="1280" height="172" alt="ips" src="https://github.com/user-attachments/assets/26cbf59f-4431-4195-bad1-30615e0f80bc" />
+<img width="1895" height="169" alt="comandos e intentos" src="https://github.com/user-attachments/assets/dd143855-1142-4928-a803-16390ea34fd0" />
+<img width="1808" height="575" alt="Captura de pantalla 2026-06-27 193301" src="https://github.com/user-attachments/assets/669f6a9c-7e74-4753-a375-a2f994858336" />
+
 ## ✅ Conclusiones
 El despliegue de infraestructura defensiva activa revela lecciones críticas sobre arquitectura y redes:
 
