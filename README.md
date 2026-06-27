@@ -132,6 +132,16 @@ Evidencias:
 <img width="1895" height="169" alt="comandos e intentos" src="https://github.com/user-attachments/assets/dd143855-1142-4928-a803-16390ea34fd0" />
 <img width="1808" height="575" alt="Captura de pantalla 2026-06-27 193301" src="https://github.com/user-attachments/assets/669f6a9c-7e74-4753-a375-a2f994858336" />
 
+El desglose detallado de los registros capturados permite identificar con precisión la mecánica de la intrusión a través de tres patrones de comportamiento técnico:
+
+En primer lugar, se constata un patrullaje automatizado y constante sobre el puerto expuesto. El registro de conexiones revela cómo los escáneres barren rangos enteros de red IP por IP de forma automatizada. Un ejemplo crítico es el comportamiento de una de las direcciones IP principales, la cual realiza una ráfaga agresiva de 14 intentos de conexión en intervalos de apenas un segundo entre sí. Esta alta frecuencia cronológica descarta cualquier interacción humana y evidencia el uso de herramientas de escaneo masivo configuradas para detectar servicios SSH activos en puertos redirigidos mediante iptables.
+
+En segundo lugar, se detalla la estrategia de los atacantes para franquear la autenticación. El vector automatizado utiliza diccionarios de credenciales predecibles dirigidos a configuraciones por defecto de servicios en la nube. Los registros muestran ataques dirigidos con éxito hacia el usuario estándar root (dejando el parámetro de contraseña vacío) y hacia el usuario predeterminado de infraestructura cloud ubuntu (también con contraseña vacía). El Honeypot intercepta estas peticiones simulando una validación correcta (cowrie.login.success) para forzar al bot a revelar su carga útil dentro de la jaula.
+
+Por último, los registros capturan la transición hacia una fase de explotación interactiva y manual, diferenciándose del comportamiento habitual de los scripts autónomos. Mientras que los virus tradicionales inyectan inmediatamente cadenas automatizadas de descarga de malware en bloque, las últimas líneas de actividad demuestran una intrusión controlada paso a paso. El atacante ejecuta de forma secuencial el comando de reconocimiento básico whoami para verificar su nivel de privilegios y el entorno del sistema operativo, procediendo inmediatamente después al cierre limpio de la sesión mediante la inyección del comando exit, lo que valida la efectividad de la sandbox para auditar el comportamiento del intruso en tiempo real.
+
+⚠️ Nota de OpSec / Descargo de responsabilidad: Toda la infraestructura cloud descrita en este laboratorio ha sido completamente destruida, purgada y desmantelada de los servidores de AWS de manera definitiva. Las direcciones IP públicas de administración y las firmas criptográficas de red registradas en las evidencias han sido rotadas y modificadas por completo, quedando inactivas y sin vinculación alguna con los sistemas locales actuales.
+
 ## ✅ Conclusiones
 El despliegue de infraestructura defensiva activa revela lecciones críticas sobre arquitectura y redes:
 
